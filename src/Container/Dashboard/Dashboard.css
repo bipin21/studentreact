@@ -1,0 +1,20 @@
+.Dashboard{
+    text-align: center;
+}
+
+.forms{
+    margin: 35px;
+    clear: both;
+    float: left;
+}
+
+.change-button{
+    margin-top: 10px;
+    display: block;
+}
+.header {
+    background-color: #9ba7b7;
+    display: inline-flex;
+    text-align: center;
+    width: 100%;
+}
