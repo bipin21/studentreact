@@ -1,5 +1,4 @@
 import React from 'react';
-import Student from '../../Component/Student/Student';
 import Students from '../../Component/Students/Students';
 import "./Dashboard.css";
 
@@ -15,8 +14,6 @@ const Dashboard = () => {
                 <input type="text" />
                 <button className="change-button">Change Name</button>
             </section>
-
-            {/* <Student name={editstudent ? editstudent.name : ''} /> */}
             
         </div>
     );
