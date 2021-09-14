@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Student from '../Student/Student';
 import "./Students.css";
 
 const Students = () => {
 
-    const [text, setText] = useState("");
+    const [name, setName] = useState("");
     const studentArray = [
         { id: 111, name: "Meti", major: "CS" },
         { id: 112, name: "Tedros", major: "CS" },
@@ -15,14 +15,13 @@ const Students = () => {
     );
 
     const changeNameHandler = () => {
-        students[0].name = text;
+        students[0].name = name;
         setStudents([...students]);
-        console.log(text)
-        setText("");
+        setName("");
     };
 
     const changeName = (event) => {
-        setText(event.target.value);
+        setName(event.target.value);
     }
 
 
@@ -33,7 +32,7 @@ const Students = () => {
             {studentList}
 
             <section className="forms">
-                <input onChange={changeName} type="text" value={text} />
+                <input onChange={changeName} type="name" value={name} />
                 <button
                     type="button"
                     onClick={changeNameHandler}>
