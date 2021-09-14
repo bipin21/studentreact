@@ -14,7 +14,11 @@
 }
 .header {
     background-color: #9ba7b7;
-    display: inline-flex;
     text-align: center;
     width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
 }
+

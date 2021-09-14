@@ -4,22 +4,24 @@ import "./Student.css";
 
 const Student = (props) => {
 //    // eslint-disable-next-line
-//    const [studentedit, setStudentedit] = useState( {
-//     name : ""
-// });
+   const [studentclick, setStudentclick] = useState(false);
 
-// const handleStudentClick =() =>{
-//     console.log(props.name);
-    
-//         <Dashboard name={props.name} />
-    
-// };
+    const handleStudentClick =() =>{
+        setStudentclick(!studentclick);
+    };
     return(
-        <div className="student">
+        <div onClick={handleStudentClick} className="student">
             <h1>Student</h1>
             <p>ID: {props.id}</p>
             <p>Name: {props.name}</p>
             <p>Major: {props.major}</p>
+
+            {studentclick ? 
+            <div>
+            <button>Edit</button>
+             <button>Delete</button>
+             </div>
+              : ''}
         </div>
     );
 };
